@@ -2,7 +2,7 @@
 <div id="main">
     <Header title="我的严严"/>
     <div id="content">
-      <Login/>
+      <Login/> 
     </div>
     <TabBar/>
 </div>

@@ -5,7 +5,7 @@
       <!-- 二级导航 -->
       <div class="movie_menu">
         <router-link tag="div" to="/movie/city" class="city_name">
-          <span>西安</span>
+          <span>{{ $store.state.city.nm }}</span>
           <i class="iconfont icon-lower-triangle"></i>
         </router-link>
         <div class="hot_switch">

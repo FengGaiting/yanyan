@@ -19,6 +19,11 @@ export default {
         Header,
         TabBar,
         Login
+    },
+    data(){
+        return {
+        }
+
     }
 
 }

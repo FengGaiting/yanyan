@@ -4,7 +4,7 @@
       <div class="city_hot">
         <h2>热门城市</h2>
         <ul class="clearfix">
-          <li v-for="item in hotList" :key = item.id>{{ item.nm }}</li>
+          <li v-for="item in hotList" :key = item.id @click="handleToCity(item.nm,item.id)">{{ item.nm }}</li>
         </ul>
       </div>
       <div class="city_sort" ref="city_sort">
@@ -89,6 +89,12 @@ export default {
     handleToIndex(index){
       var h2 = this.$refs.city_sort.getElementsByTagName("h2");
       this.$refs.city_sort.parentNode.scrollTop = h2[index].offsetTop;
+    },
+    handleToCity(nm,id){
+      this.$store.commit('city/CITY_INFO',{ nm, id});
+      window.localStorage.setItem('cityNm',nm);
+      window.localStorage.setItem('cityId',id);
+      this.$router.push('/movie/nowPlaying');
     }
   }
 }
